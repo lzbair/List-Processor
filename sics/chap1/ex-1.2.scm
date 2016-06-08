@@ -9,5 +9,6 @@
 ;Solution2 [usage: (TWO_LARGEST SQ + 2 5 3) --> 34]
 (define (FMAX x y z) (max x y z))
 (define (SMAX x y z) (min (max x y) (max y z) (max z x)))
-(define (TWO_LARGEST MAPPER REDUCTION x y z)(REDUCTION (MAPPER (FMAX x y z)) (MAPPER (SMAX x y z))))
 
+
+(define (TWO_LARGEST MAPPER REDUCTION x y z)(REDUCTION (MAPPER (FMAX x y z)) (MAPPER (SMAX x y z))))
