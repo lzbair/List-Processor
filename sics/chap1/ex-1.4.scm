@@ -14,7 +14,7 @@
 
 
 ;Solution: 
-;If the interprter use applied-order then the opernad will be evaluated first. Thus, a cyclic flow (runtime error) will 
+;If the interpreter use applied-order then the operand will be evaluated first. Thus, a cyclic flow (runtime error) will 
 ;occur when (p) is evaluated.
 
 ;If the interprter use normal-order, the program will be expand first without evaluating operands.
