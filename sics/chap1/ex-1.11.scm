@@ -7,12 +7,16 @@
 			  )
 )
 
-(define (F* n a b sum) (cond 
-							 ((< n 3) (+ sum n))
+(define (F* n a b sum) (cond ((= n 0) 0)
+                             ((= n 1) 1)
+							 ((< n 3) sum)
                              (else (F* (- n 1) b sum (+ (+ sum (* 2 b)) (* 3 a))))
 					   )
 
 )
 
-(F* 3 2 1 )
-(F* 2 2 )
+f(3) = f(2) +2f(1) + 3f(0)
+
+(F* 3 0 1 2)
+  (F* 2 1 2 4)
+     4
