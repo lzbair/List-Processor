@@ -10,4 +10,9 @@
 	    )
 )
 
+;deep reverse
+(define (reverse lst ans) (cond ((null? lst) ans)
+                                ((not (pair? lst)) lst)
+                                (else (reverse (cdr lst) (cons (reverse(car lst) '()) ans)))))
+
 
