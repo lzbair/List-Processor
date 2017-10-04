@@ -20,6 +20,7 @@
 (define (F-SRoot-Descent n) (if (< n 2) 1 (+ 1 (F-SRoot-Descent (sqrt n)))))
 
 ; t(n) = t(sqrt(n)) + n --> O(n)
-
 (define (S-SRoot-Descent n) (if (< n 2) 1 (+ (S-SRoot-Descent (sqrt n)) (Sum 1 n))))
 
+(define (generate-bin n lst) (if (= n 0) (println lst) 
+			                 (begin (generate-bin (- n 1) (cons 1 lst)) (generate-bin (- n 1) (cons 0 lst)))))
